@@ -4,6 +4,8 @@ import About from "../views/About.vue";
 import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
+import MoviesIndex from "../views/MoviesIndex.vue";
+import MoviesNew from "../views/MoviesNew.vue";
 
 const routes = [
   {
@@ -30,6 +32,16 @@ const routes = [
     path: "/logout",
     name: "Logout",
     component: Logout,
+  },
+  {
+    path: "/movies",
+    name: "MoviesIndex",
+    component: MoviesIndex,
+  },
+  {
+    path: "/movies/new",
+    name: "MoviesNew",
+    component: MoviesNew,
   },
 ];
 
