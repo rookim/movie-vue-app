@@ -20,7 +20,9 @@ export default {
 <template>
   <div class="movies-index">
     <div v-for="movie in movies" v-bind:key="movie.id">
-      <p>{{ movie.title }}</p>
+      <router-link v-bind:to="`/movies/${movie.id}`">
+        <p>{{ movie.title }}</p>
+      </router-link>
       <br />
     </div>
   </div>
