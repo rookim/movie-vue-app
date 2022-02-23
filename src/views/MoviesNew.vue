@@ -4,7 +4,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      movieParams: {},
+      movieParams: { plot: "" },
       errors: [],
     };
   },
@@ -37,18 +37,25 @@ export default {
       Title:
       <input v-model="movieParams.title" type="text" />
     </p>
+    <br />
     <p>
       Year:
       <input v-model="movieParams.year" type="text" />
     </p>
+    <br />
     <p>
       Plot:
       <input v-model="movieParams.plot" type="text" />
+      <br />
+      <!-- use v-if directive if you don't want to display small tag right away -->
+      <small>{{ 1000 - movieParams.plot.length }} characters remaining</small>
     </p>
+    <br />
     <p>
       Director:
       <input v-model="movieParams.director" type="text" />
     </p>
+    <br />
     <p>
       English?
       <input v-model="movieParams.english" type="text" />

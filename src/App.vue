@@ -1,3 +1,13 @@
+<script>
+export default {
+  methods: {
+    isLoggedIn: function () {
+      return localStorage.getitem("jwt");
+    },
+  },
+};
+</script>
+
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link>
