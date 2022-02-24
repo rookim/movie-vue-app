@@ -5,6 +5,7 @@ export default {
   data: function () {
     return {
       movies: [],
+      titleFilter: "",
     };
   },
   created: function () {
@@ -14,12 +15,30 @@ export default {
     });
   },
   function: {},
+  computed: {
+    filteredMovies() {
+      return this.movies.filter((movie) => {
+        return movie.title.toLowerCase().includes(this.titleFilter.toLowerCase());
+      });
+    },
+  },
 };
 </script>
 
 <template>
   <div class="movies-index">
-    <div v-for="movie in movies" v-bind:key="movie.id">
+    <p>
+      Search by title:
+      <input v-model="titleFilter" type="text" list="titles" />
+    </p>
+    <datalist id="titles">
+      <option v-for="movie in movies" v-bind:key="movie.id">{{ movie.title }}</option>
+    </datalist>
+    <br />
+    <br />
+    <br />
+
+    <div v-for="movie in filteredMovies" v-bind:key="movie.id">
       <router-link v-bind:to="`/movies/${movie.id}`">
         <p>{{ movie.title }}</p>
       </router-link>
