@@ -57,8 +57,9 @@ export default {
         English?
         <input v-model="movie.english" type="text" />
       </p>
+      <button v-on:click="updateMovie()">Update</button>
     </form>
-    <button v-on:click="updateMovie()">Update</button>
+    <br />
   </div>
 </template>
 
