@@ -114,9 +114,9 @@ export default {
   </div>
 </template>
 
-<style>
+<!-- <style>
 input[type="text"] {
   width: 500px;
   height: 20px;
 }
-</style>
+</style> -->

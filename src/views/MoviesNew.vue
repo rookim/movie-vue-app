@@ -71,7 +71,7 @@ export default {
   </div>
 </template>
 
-<style>
+<!-- <style>
 h1 {
   color: #18e9b1;
 }
@@ -113,4 +113,4 @@ button {
   display: inline-block;
   font-size: 16px;
 }
-</style>
+</style> -->

@@ -62,5 +62,3 @@ export default {
     <br />
   </div>
 </template>
-
-<style></style>

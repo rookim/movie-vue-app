@@ -42,5 +42,3 @@ export default {
     <button v-on:click="destroyMovie()">Delete</button>
   </div>
 </template>
-
-<style></style>
